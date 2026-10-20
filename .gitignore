@@ -1,0 +1,7 @@
+target/
+fabio.db
+fabio.db-shm
+fabio.db-wal
+.env
+.idea/
+*.iml

@@ -1,0 +1,108 @@
+========================================================
+  FABIO IMPORTES - VERSAO EM JAVA (Spring Boot)
+  Sistema WEB em Java, para a materia de Java
+========================================================
+
+Oi Fabio! Este e o seu ERP refeito em JAVA (Spring Boot),
+como o professor pediu. As telas continuam as mesmas (o
+frontend em HTML/CSS/JS foi mantido) - o que mudou foi o
+"motor" por tras, que agora e Java.
+
+Tudo e de GRACA. Nao tem nenhuma taxa. So precisa instalar
+duas coisas gratuitas no seu PC (uma unica vez).
+
+--------------------------------------------------------
+1) INSTALE O JAVA (JDK 17 ou mais novo) - GRATIS
+--------------------------------------------------------
+- Baixe o "Eclipse Temurin JDK 17" (ou 21) aqui:
+    https://adoptium.net/
+- Escolha Windows, instale clicando "Next" ate o fim.
+- Para conferir, abra o Prompt de Comando (cmd) e digite:
+    java -version
+  Tem que aparecer algo como "17" ou "21".
+
+--------------------------------------------------------
+2) INSTALE O MAVEN - GRATIS
+--------------------------------------------------------
+O Maven e a ferramenta que monta e roda o projeto Java.
+- Baixe aqui (Binary zip): https://maven.apache.org/download.cgi
+- Descompacte, por exemplo, em:  C:\maven
+- Adicione  C:\maven\bin  na variavel PATH do Windows:
+    * Menu Iniciar -> procure "variaveis de ambiente"
+    * Editar as variaveis de ambiente do sistema
+    * Botao "Variaveis de Ambiente"
+    * Em "Path" -> Editar -> Novo -> cole  C:\maven\bin  -> OK
+- Para conferir, feche e abra o cmd de novo e digite:
+    mvn -version
+
+--------------------------------------------------------
+3) RODAR O SISTEMA
+--------------------------------------------------------
+- Descompacte este arquivo em uma pasta (ex.: a Area de
+  Trabalho).
+- Abra o Prompt de Comando (cmd) DENTRO da pasta
+  "fabio-java" (a que tem o arquivo pom.xml).
+  Dica: na barra de endereco da pasta, digite  cmd  e
+  aperte Enter - ja abre o cmd na pasta certa.
+- Confirme que esta na pasta certa digitando:  dir
+  Tem que aparecer o "pom.xml" na lista.
+- Agora rode:
+    mvn spring-boot:run
+- Na primeira vez o Maven baixa umas coisas (precisa de
+  internet SO nessa primeira vez) e demora alguns minutos.
+  Depois fica rapido.
+- Quando aparecer uma mensagem dizendo que iniciou,
+  abra o navegador em:
+    http://localhost:3000
+
+--------------------------------------------------------
+4) LOGIN
+--------------------------------------------------------
+    Usuario: admin
+    Senha:   admin123
+(Depois voce pode trocar a senha dentro do sistema, na
+ tela de Configuracoes.)
+
+--------------------------------------------------------
+5) PARA PARAR
+--------------------------------------------------------
+- No cmd onde ele esta rodando, aperte  Ctrl + C.
+
+--------------------------------------------------------
+ONDE FICAM OS DADOS
+--------------------------------------------------------
+- O banco de dados fica num arquivo chamado  fabio.db ,
+  criado automaticamente na pasta do projeto. Ele usa
+  SQLite (banco relacional, como o professor costuma
+  exigir). Nao precisa instalar banco nenhum.
+- Ja vem com alguns produtos e categorias de exemplo.
+
+--------------------------------------------------------
+IMPORTANTE (seja honesto com o professor e comigo :)
+--------------------------------------------------------
+- Eu NAO consegui compilar/testar este Java aqui no meu
+  ambiente (nao tinha o Java de desenvolvimento instalado).
+  Entao e POSSIVEL que apareca um errinho pequeno na
+  primeira vez que voce rodar.
+- Se aparecer QUALQUER erro vermelho no cmd, tire um print
+  (ou copie o texto) e me manda - eu arrumo rapidinho.
+- A exportacao em PDF (um item do documento de requisitos)
+  ainda nao foi feita: por enquanto o sistema exporta em
+  CSV (que abre no Excel). Se o professor exigir PDF, me
+  avisa que eu adiciono depois.
+
+--------------------------------------------------------
+O QUE ESTE SISTEMA TEM (bate com os requisitos)
+--------------------------------------------------------
+- Login com usuario e senha (senha guardada de forma
+  segura, nao em texto puro).
+- Cadastro completo (CRUD) de: Produtos, Categorias,
+  Clientes e Vendas.
+- Controle de estoque com entradas, saidas e ajustes
+  (nao deixa o estoque ficar negativo).
+- Painel (dashboard) com numeros e alertas de estoque.
+- Relatorios por categoria, produtos mais valiosos, etc.
+- Exportacao em CSV.
+- Banco de dados relacional (SQLite).
+
+Qualquer duvida, e so chamar!

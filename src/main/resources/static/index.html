@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0f172a" />
+  <title>Fabio Importes — Sistema de Gestão</title>
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+  <!-- TELA DE LOGIN -->
+  <div id="login">
+    <form class="login-card" id="form-login" autocomplete="on">
+      <div class="login-logo"><span class="dot">F</span> Fabio Importes</div>
+      <p class="login-sub">Sistema Administrativo de Gestão</p>
+      <div class="campo">
+        <label for="in-usuario">Usuário</label>
+        <input id="in-usuario" name="username" value="admin" required autocomplete="username" />
+      </div>
+      <div class="campo">
+        <label for="in-senha">Senha</label>
+        <input id="in-senha" name="password" type="password" required autocomplete="current-password" placeholder="••••••••" />
+      </div>
+      <button class="btn btn-primary btn-full" type="submit" id="btn-entrar">Entrar</button>
+      <div class="erro-login" id="erro-login"></div>
+    </form>
+  </div>
+
+  <!-- APP -->
+  <div id="app" class="oculto">
+    <div class="backdrop" id="backdrop"></div>
+    <aside class="sidebar" id="sidebar">
+      <div class="marca"><span class="dot">F</span> Fabio Importes</div>
+      <nav class="nav" id="nav">
+        <div class="grupo">Principal</div>
+        <a data-page="dashboard" class="ativo"><span class="ic">📊</span> Dashboard</a>
+        <div class="grupo">Estoque</div>
+        <a data-page="produtos"><span class="ic">📦</span> Produtos</a>
+        <a data-page="movimentacoes"><span class="ic">🔄</span> Movimentações</a>
+        <a data-page="categorias"><span class="ic">🏷️</span> Categorias</a>
+        <div class="grupo">Comercial</div>
+        <a data-page="vendas"><span class="ic">💰</span> Vendas</a>
+        <a data-page="clientes"><span class="ic">👥</span> Clientes</a>
+        <div class="grupo">Gestão</div>
+        <a data-page="relatorios"><span class="ic">📈</span> Relatórios</a>
+        <a data-page="config"><span class="ic">⚙️</span> Configurações</a>
+      </nav>
+      <div class="rodape">v2.0 · ERP Admin</div>
+    </aside>
+
+    <div class="main">
+      <header class="topbar">
+        <button class="toggle" id="toggle" aria-label="Abrir menu">☰</button>
+        <h1 id="titulo-pagina">Dashboard</h1>
+        <div class="espaco"></div>
+        <div class="usuario">
+          <span class="avatar" id="avatar">A</span>
+          <span id="nome-usuario">admin</span>
+        </div>
+        <button class="btn btn-ghost btn-sm" id="btn-sair">Sair</button>
+      </header>
+      <main class="conteudo" id="conteudo"></main>
+    </div>
+  </div>
+
+  <!-- MODAL + TOASTS -->
+  <div id="modal-root"></div>
+  <div id="toasts"></div>
+
+  <script src="/js/app.js"></script>
+</body>
+</html>
